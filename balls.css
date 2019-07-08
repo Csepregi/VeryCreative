@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  text-align:center;
+}
+.gameField
+{
+    display: inline-block;
+  background: #eaeaea;
+  min-height: 100px;
+  height: 300px;
+  padding: 10px;
+  width: 280px;
+  border:3px solid #e2e2e2;
+  padding:20px;
+  border-radius:10px;
+  margin:30px auto 40px auto;
+  position:relative
+}
+
+#sum{
+   text-align: left;
+}
+
+#score{
+    text-align: right;
+}
+
+.balls {
+    width: 60px;
+    height: 60px;
+    /* margin: 30px 30px 0px 30px; */
+    margin: 0 auto;
+    margin-top:4px;
+    border-radius: 50%;
+    text-align: center;
+    /* background: pink; */
+}
+
+/* #balltable > div:nth-child(3n+1) {
+  background:red;
+} */
+
+/* #balltable .balls:nth-child(3n+3) {  
+  background:green;
+}
+
+#balltable .balls:nth-child(5n+5) {  
+  background:blue;
+}
+
+#balltable .balls:nth-child(5n+15) {  
+  background:purple;
+} */
+
+/* .reactDiv{
+    text-align: center;
+} */
+
+.myCanvas{
+  overflow: scroll;
+}
+
+.ballsfield {
+  margin-top: 10px;
+  height: 250px;  
+  overflow: auto;
+}
+
+#balltable {
+  height: 800px;
+  padding: 10px;
+  text-align: center;
+  float: center;
+}
