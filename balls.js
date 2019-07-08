@@ -26,6 +26,7 @@ let result = [];
 let count = 0;
 let pointer = 0;
 function requestData(){
+    let newBall;
    count++;
     if(!count){
         newBall = Ball.create('pink', 1);
