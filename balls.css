@@ -2,11 +2,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  text-align:center;
 }
 .gameField
 {
-    display: inline-block;
+    display: center;
   background: #eaeaea;
   min-height: 100px;
   height: 300px;
@@ -19,12 +18,21 @@ body {
   position:relative
 }
 
-#sum{
-   text-align: left;
+#dropDiv{
+  text-align: center;
 }
 
-#score{
-    text-align: right;
+ .numbers{
+  display: flex;
+  
+} 
+#sumValueDiv{
+ float: left;
+ padding-right: 150px;
+}
+
+#sumScoreDiv{
+  text-align: right;
 }
 
 .balls {
@@ -35,37 +43,13 @@ body {
     margin-top:4px;
     border-radius: 50%;
     text-align: center;
-    /* background: pink; */
-}
-
-/* #balltable > div:nth-child(3n+1) {
-  background:red;
-} */
-
-/* #balltable .balls:nth-child(3n+3) {  
-  background:green;
-}
-
-#balltable .balls:nth-child(5n+5) {  
-  background:blue;
-}
-
-#balltable .balls:nth-child(5n+15) {  
-  background:purple;
-} */
-
-/* .reactDiv{
-    text-align: center;
-} */
-
-.myCanvas{
-  overflow: scroll;
 }
 
 .ballsfield {
   margin-top: 10px;
   height: 250px;  
   overflow: auto;
+ 
 }
 
 #balltable {
