@@ -12,7 +12,7 @@ def rand_time
   }
  # <= I wrote .year to rand_time to get back only the years. 
 
- 
+
 #   logins.each do |key, value|
 #     puts "The hash key is #{key} and the value is #{value}."
 #   end
@@ -46,5 +46,19 @@ def rand_time
 logins.each do |element|
     element.each do |inner_element|
       p inner_element
+     
     end
   end
+
+
+ 
+  
+      
+
+      counts = Hash.new 0
+
+      logins.each do |year|
+        logins[year] += 1
+      end
+
+    p counts
