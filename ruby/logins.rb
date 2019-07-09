@@ -4,61 +4,27 @@ def rand_time
   
   people = [[2, 'matayo'], [1, 'nico'], [0, 'angelo'], [3, 'luca']]
 
-  logins = { # ugly on purpose
-    0 => [rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year],
-    1 => [rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year],
-    2 => [rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year],
-    3 => [rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year, rand_time.year],
+
+logins = { # ugly on purpose
+    0 => [rand_time, rand_time, rand_time, rand_time, rand_time, rand_time, rand_time, rand_time],
+    1 => [rand_time, rand_time, rand_time, rand_time, rand_time, rand_time, rand_time, rand_time],
+    2 => [rand_time, rand_time, rand_time, rand_time, rand_time, rand_time, rand_time, rand_time],
+    3 => [rand_time, rand_time, rand_time, rand_time, rand_time, rand_time, rand_time, rand_time],
   }
- # <= I wrote .year to rand_time to get back only the years. 
 
+users_logins = Hash.new
 
-#   logins.each do |key, value|
-#     puts "The hash key is #{key} and the value is #{value}."
-#   end
-
- 
-#p iterate(logins)
-#   puts iterate(logins)
-# def count_letters(hash, results = {})
-#     hash.each do |key, value|
-#       if value.kind_of?(Hash)
-#         count_letters(value, results)
-#       else
-#         results[key] = (results[key] || 0) + 1
-#       end
-#     end
-#     results
-#   end
-  
-  #p count_letters(logins)
-
-#   logins.each{ |key, value|
-#     puts "Key = #{key} / Value = #{value}"
-#   }
-
-#   logins.each{ |child_arr|
-#     child_arr.each{ |child_child_value | 
-#      puts child_child_value
-#     }
-# }
-
-logins.each do |element|
-    element.each do |inner_element|
-      p inner_element
-     
+people.each do |users|
+    username = users[1]
+    userid = users[0]
+    
+    users_logins[username] = Hash.new
+    
+    for login in logins[userid] 
+        year = login.year
+            users_logins[username][year]  = (users_logins[username][year]  || 0) + 1
     end
-  end
+end
 
+p users_logins
 
- 
-  
-      
-
-      counts = Hash.new 0
-
-      logins.each do |year|
-        logins[year] += 1
-      end
-
-    p counts
